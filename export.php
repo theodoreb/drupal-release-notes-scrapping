@@ -172,7 +172,7 @@ body {max-width: 60em;margin:1em auto;font-family:sans-serif;}
 <h1>Release notes for version $version</h1>
 <p>
 Issues committed to the $major.$minor.x branch <br>
-since version {$last_tag['title']} released at {$last_tag['commit']['created_at']} <br>
+since version {$last_tag['name']} released at {$last_tag['commit']['created_at']} <br>
 with the tag 
 <a href="https://www.drupal.org/project/issues/search?projects=Drupal+core&issue_tags=$version+release+notes">
   $version release notes</a>
