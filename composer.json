@@ -1,9 +1,16 @@
 {
+    "name": "theodore/drupal-release-notes-scrapping",
+    "description": "Create release notes for Drupal core",
+    "license": "MIT",
     "require": {
         "http-interop/http-factory-guzzle": "^1.2",
         "querypath/querypath": "^3.0",
         "masterminds/html5": "^2.7",
         "guzzlehttp/guzzle": "^7.5",
-        "m4tthumphrey/php-gitlab-api": "^11.8"
+        "m4tthumphrey/php-gitlab-api": "^11.8",
+        "symfony/var-dumper": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {"ReleaseNotes\\": "src/"}
     }
 }
