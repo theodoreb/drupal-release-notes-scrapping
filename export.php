@@ -29,7 +29,7 @@ $gl->setUrl(GIT_API);
 $pager = new ResultPager($gl);
 
 function nidFromCommit($commit) {
-  if (preg_match('/^Issue #(\d+).* by ([^:]+):(.*)$/', $commit['title'], $matches)) {
+  if (preg_match('/^Issue #(\d+)/', $commit['title'], $matches)) {
     return $matches[1];
   }
   return FALSE;
