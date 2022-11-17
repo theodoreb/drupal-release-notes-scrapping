@@ -40,7 +40,7 @@ logg("Fetching last tagged release from gitlab for the branch $major.$minor.x");
 $last_tag = $gl->tags()->all(CORE_ID, ['search' => "^$major.$minor",])[0];
 
 
-logg("Fetching all commits from gitlab for the branch $major.$minor.x since {$last_tag['commit']['created_at']}");
+logg("Fetching all commits from gitlab for the branch $major.$minor.x since tag {$last_tag['name']} created at {$last_tag['commit']['created_at']}");
 // Get all issues committed since the last tag.
 $all_commits = $pager->fetchAll(new Commits($gl), 'all', [CORE_ID, ['ref_name' => "$major.$minor.x", 'since' => $last_tag['commit']['created_at']]]);
 $all_committed_issues = array_filter(array_map('nidFromCommit', $all_commits));
